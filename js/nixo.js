@@ -76,19 +76,20 @@ $(document).ready(function () {
         var mapCanvas = document.getElementById('map-canvas');
         var mapOptions = {
             center: myLatLng,
-            zoom: 13,
+            zoom: 17,
             navigationControl: true,
             mapTypeControl: true,
             scaleControl: true,
             scrollwheel: false,
             draggable: true,
-            mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: 'roadmap'
         };
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
+           // icon:'hero2.jpg',
             title: 'Find us here!'
         });
         marker.setMap(map);
