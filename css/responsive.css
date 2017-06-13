@@ -1,0 +1,111 @@
+/*------------------------------------------------------------------
+[Media Queries Stylesheet]
+
+Author: AtypicalThemes
+Template: Nixo - Creative Agency OnePage.
+Version:	1.0
+Last change:	07/01/2017
+
+-------------------------------------------------------------------
+
+/* --------------------------- /////////// MEDIA QUERIES /////////// --------------------------- */
+@media (min-width : 320px) {
+    .card {
+        margin: 20px auto;
+    }
+}
+/* Smartphones < 640px ----------- */
+@media (min-width : 320px) and (max-width : 639px) {
+    .hero-caption {
+        border: none;
+    }
+    .tagline {
+        font-size: 2.5rem;
+    }
+    .content-block i {
+        display: none;
+    }
+    .content-block i.align-right {
+        display: none;
+    }
+}
+/* High End Smartphones (portrait and landscape) ----------- */
+@media (min-width : 640px) and (max-width : 1024px) {
+    .card {
+        width: 40%;
+        float: left;
+        margin-left: 40px;
+    }
+} 
+/* Medium devices ----------- */
+@media (min-width : 992px) and (max-width : 1200px) {
+    .card {
+        float: left;
+        width: 300px;
+        margin-left: 125px;
+    }
+    .form-group {
+        padding-right: 5px;
+        padding-left: 10px;
+    }
+}
+/* High end tablet and small desktop ----------- */
+@media (max-width : 1024px) {
+    .container {
+        padding: 0 5% 0 5%;
+    }
+    .hero-caption {
+        margin-top: 25%;
+    }
+    .tagline {
+        font-size: 2rem;
+    }
+    .section-heading {
+        padding: 0 5% 0 5%;
+    }
+    #about-section .animation-element {
+        margin-bottom: 6em;
+    }
+    #about-section .animation-element:last-child {
+        margin-bottom: 0;
+    }
+    .add-service-wrap {
+        width: 100%;
+    }
+    .testimonial-img {
+        left: 27%;
+        width: 18%;
+    }
+    .testimonial-name-wrapper {
+        left: 50%;
+    }
+    .testimonial-name {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+    #footer {
+        height: auto;
+    }
+    #copyright {
+        text-align: center;
+        float: none;
+    }
+    .social-links {
+        float: none;   
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 0;
+    }
+    .large-margin {
+        margin-bottom: 6em; /* 100px */
+    }
+
+}
+@media (min-width: 1200px) {
+    .card {
+        margin-left: 25px;
+        }
+}
