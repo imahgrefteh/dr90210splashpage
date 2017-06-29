@@ -970,7 +970,7 @@ textarea:focus {
 
 /* --------------------------- /////////// XII. FOOTER /////////// --------------------------- */
 #footer {
-    background: #F0F0F0; /* footer color */
+    background: pink; /* footer color */
     border-top: 1px solid #D8D8D8;
     color: #333;
     height: 60px;
