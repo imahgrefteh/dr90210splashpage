@@ -33,7 +33,8 @@ $(document).ready(function () {
                 width: jQuery(this).attr('data-percent')
             }, 1000);
             var percent = jQuery(this).attr('data-percent');
-            jQuery(this).find('.count').html('<span>' + percent + '</span>');
+             var displayPercent = jQuery(this).attr('display-value');
+            jQuery(this).find('.count').html('<span>' + displayPercent + '</span>');
         });
     });
 
