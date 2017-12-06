@@ -981,7 +981,7 @@ textarea:focus {
     background: pink; /* footer color */
     border-top: 1px solid #D8D8D8;
     color: #333;
-    height: 60px;
+    /*height: 60px;*/
 }
 
 .social-links {
