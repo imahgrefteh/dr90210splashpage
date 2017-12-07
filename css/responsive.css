@@ -93,7 +93,8 @@ Last change:	07/01/2017
         text-align: center;
         float: none;
     }
-    .social-links {
+    .social-links {  
+        /*display: none; to hide it */
         float: none;   
         margin-bottom: 20px;
         text-align: center;
