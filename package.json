@@ -1,0 +1,25 @@
+{
+  "name": "parallax",
+  "version": "1.0.0",
+  "description": "dr90210",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imahgrefteh/dr90210splashpage.git"
+  },
+  "keywords": [
+    "dr90210"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imahgrefteh/dr90210splashpage/issues"
+  },
+  "homepage": "https://github.com/imahgrefteh/dr90210splashpage#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
