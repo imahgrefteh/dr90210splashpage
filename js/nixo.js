@@ -8,6 +8,9 @@
  Description: Custom JS file
 
  -------------------------------------------*/
+
+var nodemailer = require('nodemailer');
+
 $(document).ready(function () {
 
 
@@ -33,7 +36,7 @@ $(document).ready(function () {
                 width: jQuery(this).attr('data-percent')
             }, 1000);
             var percent = jQuery(this).attr('data-percent');
-             var displayPercent = jQuery(this).attr('display-value');
+            var displayPercent = jQuery(this).attr('display-value');
             jQuery(this).find('.count').html('<span>' + displayPercent + '</span>');
         });
     });
@@ -72,6 +75,7 @@ $(document).ready(function () {
 
     // LOAD GOOGLE MAP
     google.maps.event.addDomListener(window, 'load', initialize);
+
     function initialize() {
         var myLatLng = {lat: 34.064417, lng: -118.371090};
         var mapCanvas = document.getElementById('map-canvas');
@@ -90,7 +94,7 @@ $(document).ready(function () {
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-           // icon:'hero2.jpg',
+            // icon:'hero2.jpg',
             title: 'Find us here!'
         });
         marker.setMap(map);
@@ -166,23 +170,17 @@ $(document).ready(function () {
     });
 
     function submitSignup() {
+        console.log('nodemailer', nodemailer);
         // Initiate Variables With Form Content
         var emailsign = $("#emailsign").val();
 
-
-        $.ajax({
-            type: "POST",
-            url: "php/newsletter-process.php",
-            data: "&emailsign=" + emailsign,
-            success: function (text) {
-                if (text === "success") {
-                    signupSuccess();
-                } else {
-                    signupError();
-                    signupMSG(false, text);
-                }
-            }
-        });
+        console.log($("#emailsign").val());
+        if (text === "success") {
+            signupSuccess();
+        } else {
+            signupError();
+            signupMSG(false, text);
+        }
     }
 
     function signupSuccess() {

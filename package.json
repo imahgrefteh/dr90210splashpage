@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/imahgrefteh/dr90210splashpage#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemailer": "^4.4.1"
   }
 }
