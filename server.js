@@ -23,7 +23,7 @@ var transporter = nodemailer.createTransport({
     //TODO: https://stackoverflow.com/a/5870544/1177645
     service: 'gmail',
     auth: {
-        user: 'imahgref@gmail.com',
+        user: config.gmail.user_name ,
         pass: ''
     }
 });
