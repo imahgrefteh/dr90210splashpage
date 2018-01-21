@@ -32,9 +32,38 @@ app.post('/sendemail', function (req, res) {
     var emailAddress = req.body.emailAddress;
     var mailOptions = {
         from: 'youremail@gmail.com',
-        to: 'mjghods@gmail.com' ,
-        subject: 'Hey! '+ emailAddress+ ' wants newsletter information',
+        to: 'mjghods@gmail.com',
+        subject: 'Hey! ' + emailAddress + ' wants newsletter information',
         text: emailAddress
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+            res.send(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.send('Email sent: ' + info.response);
+        }
+    });
+});
+
+
+app.post('/moreinfo', function (req, res) {
+    var emailAddress = req.body.emailAddress;
+    var name = req.body.name;
+    var body = {
+            Name: req.body.name,
+            Email: emailAddress,
+            phone: req.body.phone,
+            message: req.body.message
+    };
+
+    var mailOptions = {
+        from: 'youremail@gmail.com',
+        to: 'mjghods@gmail.com',
+        subject: "Hey! " + name + " has some Q's for you",
+        text: JSON.stringify(body)
     };
 
     transporter.sendMail(mailOptions, function (error, info) {

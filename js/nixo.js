@@ -113,26 +113,27 @@ $(document).ready(function () {
     });
 
     function submitForm() {
-        // Initiate Variables With Form Content
         var name = $("#name").val();
+        var phone = $("#phone").val();
         var email = $("#email").val();
-        var website = $("#website").val();
         var message = $("#message").val();
 
+        console.log('message', message);
 
-        $.ajax({
-            type: "POST",
-            url: "php/form-process.php",
-            data: "name=" + name + "&email=" + email + "&website=" + website + "&message=" + message,
-            success: function (text) {
-                if (text === "success") {
-                    formSuccess();
-                } else {
-                    formError();
-                    submitMSG(false, text);
-                }
-            }
-        });
+        $.post('/moreinfo', {
+            emailAddress: email,
+            name: name,
+            phone: phone,
+            message: message
+        }).done(function success() {
+            formSuccess();
+            console.log('it worked!');
+        }).fail(function failure() {
+            formError();
+            submitMSG(false, 'no goood!');
+            console.log('it failed!');
+        })
+
     }
 
     function formSuccess() {
@@ -169,7 +170,6 @@ $(document).ready(function () {
     });
 
     function submitSignup() {
-        // Initiate Variables With Form Content
         var emailsign = $("#emailsign").val();
 
         $.post('/sendemail', {
