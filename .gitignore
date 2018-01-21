@@ -2,3 +2,5 @@
 .gitignore
 .idea/
 parallax.iml
+config.js
+npm-debug.log
