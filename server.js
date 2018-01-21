@@ -32,7 +32,7 @@ app.post('/sendemail', function (req, res) {
     var emailAddress = req.body.emailAddress;
     var mailOptions = {
         from: 'youremail@gmail.com',
-        to: 'mjghods@gmail.com',
+        to: config.gmail.to,
         subject: 'Hey! ' + emailAddress + ' wants newsletter information',
         text: emailAddress
     };
