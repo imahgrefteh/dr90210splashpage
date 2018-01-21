@@ -9,7 +9,6 @@
 
  -------------------------------------------*/
 
-var nodemailer = require('nodemailer');
 
 $(document).ready(function () {
 
@@ -170,17 +169,19 @@ $(document).ready(function () {
     });
 
     function submitSignup() {
-        console.log('nodemailer', nodemailer);
         // Initiate Variables With Form Content
         var emailsign = $("#emailsign").val();
 
-        console.log($("#emailsign").val());
-        if (text === "success") {
+        $.post('/sendemail', {
+            emailAddress: emailsign
+        }).done(function success() {
             signupSuccess();
-        } else {
+            console.log('it worked!');
+        }).fail(function failure() {
             signupError();
-            signupMSG(false, text);
-        }
+            signupMSG(false, 'it failed!');
+            console.log('it failed!');
+        })
     }
 
     function signupSuccess() {
