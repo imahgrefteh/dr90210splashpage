@@ -1,9 +1,10 @@
 var config = {};
 config.gmail = {};
 
-config.gmail.user_name = process.env.gmail.user_name || "USERNAME";
-config.gmail.password = process.env.gmail.password || "PASSWORD";
-config.gmail.to = process.env.gmail.to || "TO_ADDRESS";
+config.gmail.user_name = process.env.GMAIL_USERNAME || "USERNAME";
+
+config.gmail.password = process.env.GMAIL_PASSWORD || "PASSWORD";
+config.gmail.to = process.env.GMAIL_TO || "TO_ADDRESS";
 
 config.web = {};
 config.web.port = process.env.WEB_PORT || 8080;
