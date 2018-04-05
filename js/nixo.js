@@ -172,7 +172,7 @@ $(document).ready(function () {
     function submitSignup() {
         var emailsign = $("#emailsign").val();
 
-        $.post('/sendemail', {
+        $.post('/newsletter', {
             emailAddress: emailsign
         }).done(function success() {
             signupSuccess();
